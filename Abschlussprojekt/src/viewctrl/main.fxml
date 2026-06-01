@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="500" prefWidth="700" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.MainController">
+
+    <top>
+        <VBox>
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            <Label style="-fx-font-size: 20;" text="Lernkartei - Uebersicht" />
+        </VBox>
+    </top>
+
+    <center>
+        <HBox spacing="20">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+
+            <VBox spacing="5">
+                <Label text="Decks:" />
+                <ListView fx:id="deckView" prefHeight="380" prefWidth="300" />
+            </VBox>
+
+            <VBox spacing="5">
+                <Label text="Karten im Deck:" />
+                <ListView fx:id="kartenView" prefHeight="380" prefWidth="330" />
+            </VBox>
+        </HBox>
+    </center>
+
+</BorderPane>
