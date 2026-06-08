@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Ein Deck buendelt mehrere Lernkarten unter einem Namen.
-public class Deck {
+// Comparable, damit Decks im TreeSet alphabetisch sortiert werden.
+public class Deck implements Comparable<Deck> {
 
     private String name;
     private List<Lernkarte> karten;
@@ -24,6 +25,12 @@ public class Deck {
 
     public void addKarte(Lernkarte karte) {
         karten.add(karte);
+    }
+
+    // Sortierung im TreeSet nach Deck-Name (Gross-/Kleinschreibung egal).
+    @Override
+    public int compareTo(Deck other) {
+        return this.name.compareToIgnoreCase(other.name);
     }
 
     @Override

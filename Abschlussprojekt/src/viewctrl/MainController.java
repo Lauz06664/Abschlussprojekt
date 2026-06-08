@@ -1,44 +1,45 @@
 package viewctrl;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import main.ViewManager;
 import model.Deck;
+import model.DeckVerwaltung;
 import model.Lernkarte;
-import model.TextKarte;
+
+import java.io.IOException;
 
 public class MainController {
 
     @FXML private ListView<Deck> deckView;
     @FXML private ListView<Lernkarte> kartenView;
+    @FXML private TextField txtNeuesDeck;
+    @FXML private Label lblInfo;
 
-    // Die Decks, die in der Uebersicht angezeigt werden.
-    private ObservableList<Deck> decks = FXCollections.observableArrayList();
+    private DeckVerwaltung model;
+    private ViewManager viewManager;
+
+    public void setModel(DeckVerwaltung model) {
+        this.model = model;
+    }
+
+    public void setViewManager(ViewManager vm) {
+        this.viewManager = vm;
+    }
 
     @FXML
     public void initialize() {
-        // Ein paar Test-Decks anlegen, damit wir etwas sehen.
-        Deck sew = new Deck("SEW Grundlagen");
-        sew.addKarte(new TextKarte("k1", "Was ist Polymorphismus?",
-                "Gleiche Methode, unterschiedliches Verhalten je nach Objekt."));
-        sew.addKarte(new TextKarte("k2", "Wofuer steht MVC?",
-                "Model - View - Controller"));
-        sew.addKarte(new TextKarte("k3", "Was macht eine PriorityQueue?",
-                "Gibt immer das Element mit der hoechsten Prioritaet zuerst zurueck."));
-
-        Deck englisch = new Deck("Englisch Vokabeln");
-        englisch.addKarte(new TextKarte("k4", "to inherit", "erben"));
-        englisch.addKarte(new TextKarte("k5", "queue", "Warteschlange"));
-
-        decks.add(sew);
-        decks.add(englisch);
-
-        deckView.setItems(decks);
-
         // Wenn ein Deck ausgewaehlt wird, die Karten rechts anzeigen.
         deckView.getSelectionModel().selectedItemProperty().addListener(
                 (obs, altesDeck, neuesDeck) -> zeigeKarten(neuesDeck));
+    }
+
+    // Fuellt die Deck-Liste aus dem TreeSet (alphabetisch sortiert).
+    public void zeigeDecks() {
+        deckView.setItems(FXCollections.observableArrayList(model.getSortierteDeckListe()));
     }
 
     private void zeigeKarten(Deck deck) {
@@ -47,5 +48,35 @@ public class MainController {
             return;
         }
         kartenView.setItems(FXCollections.observableArrayList(deck.getKarten()));
+    }
+
+    @FXML
+    void neuesDeck() {
+        String name = txtNeuesDeck.getText().trim();
+        if (name.isEmpty()) {
+            lblInfo.setText("Bitte einen Deck-Namen eingeben.");
+            return;
+        }
+        if (model.existiert(name)) {
+            lblInfo.setText("Dieses Deck gibt es schon.");
+            return;
+        }
+        model.addDeck(new Deck(name));
+        txtNeuesDeck.clear();
+        lblInfo.setText("");
+        zeigeDecks();
+    }
+
+    @FXML
+    void neueKarte() throws IOException {
+        Deck deck = deckView.getSelectionModel().getSelectedItem();
+        if (deck == null) {
+            lblInfo.setText("Bitte zuerst ein Deck auswaehlen.");
+            return;
+        }
+        viewManager.openEditorModal(deck);
+        // Nach dem Schliessen des Editors die Anzeige aktualisieren.
+        zeigeKarten(deck);
+        deckView.refresh();
     }
 }

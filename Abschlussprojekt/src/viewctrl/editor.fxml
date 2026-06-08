@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.EditorController">
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
+
+    <Label style="-fx-font-size: 16;" text="Neue Karte" />
+
+    <Label text="Kartentyp:" />
+    <ChoiceBox fx:id="typBox" prefWidth="200" />
+
+    <Label text="Frage:" />
+    <TextField fx:id="txtFrage" />
+
+    <!-- Bereich fuer Textkarten -->
+    <VBox fx:id="boxText" spacing="5">
+        <Label text="Antwort:" />
+        <TextField fx:id="txtAntwort" />
+    </VBox>
+
+    <!-- Bereich fuer Multiple-Choice-Karten -->
+    <VBox fx:id="boxMc" spacing="5">
+        <Label text="Antwort 1:" />
+        <TextField fx:id="txtA1" />
+        <Label text="Antwort 2:" />
+        <TextField fx:id="txtA2" />
+        <Label text="Antwort 3:" />
+        <TextField fx:id="txtA3" />
+        <Label text="Richtige Antwort:" />
+        <ChoiceBox fx:id="korrektBox" prefWidth="200" />
+    </VBox>
+
+    <Button onAction="#speichern" text="Speichern" />
+    <Label fx:id="lblInfo" style="-fx-text-fill: red;" text="" />
+</VBox>

@@ -1,12 +1,15 @@
-# Lernkartei - Version 1
+# Lernkartei - Version 2
 
-## Was wir gemacht haben (ca. 2-3 Stunden)
-- Projekt in IntelliJ aufgesetzt mit den Paketen `main`, `model` und `viewctrl`.
-- Die abstrakte Klasse `Lernkarte` geschrieben und davon `TextKarte` abgeleitet (Vererbung).
-- Eine Klasse `Deck` gemacht, die eine Liste von Karten hat.
-- Ein erstes JavaFX-Fenster mit `main.fxml` und `MainController` gebaut.
-- Links werden ein paar Test-Decks angezeigt, rechts die Karten vom ausgewählten Deck.
+## Was wir gemacht haben
+- Zweite Kartenart `MultipleChoiceKarte` eingebaut (Frage + 3 Antworten + welche richtig ist).
+- `DeckVerwaltung` geschrieben, die alle Decks verwaltet:
+  - `HashMap`, um ein Deck schnell über den Namen zu finden.
+  - `TreeSet`, damit die Decks immer alphabetisch sortiert sind.
+- `ViewManager` gemacht, damit wir mehrere Fenster/Szenen wechseln können (wie in Projekt 10).
+- Einen modalen Editor (`editor.fxml` + `EditorController`) gebaut, um neue Karten anzulegen.
 
-## Stand
-Läuft schon, man kann die Decks und ihre Karten sehen. Die Daten sind aber noch
-fest im Code eingetragen, speichern und lernen kommt später.
+## Neu/geändert gegenüber Version 1
+- `Deck` ist jetzt `Comparable` (Sortierung nach Name).
+- Decks kommen nicht mehr direkt aus dem Controller, sondern aus der `DeckVerwaltung`.
+- In der Hauptansicht kann man jetzt selbst neue Decks anlegen und über den Editor Karten hinzufügen.
+- `Main` startet das Programm jetzt über den `ViewManager`.
