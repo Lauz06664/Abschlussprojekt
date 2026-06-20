@@ -55,10 +55,17 @@ public class EditorController {
 
     private void updateFelder() {
         boolean istText = typBox.getValue().equals("Text");
+        // setManaged(false): der ausgeblendete Bereich soll auch keinen Platz mehr im Layout belegen.
         boxText.setVisible(istText);
         boxText.setManaged(istText);
         boxMc.setVisible(!istText);
         boxMc.setManaged(!istText);
+
+        // Fenster an die neue Hoehe anpassen, damit bei Multiple Choice nichts abgeschnitten wird.
+        // (beim ersten Aufruf gibt es noch keine Scene, deshalb die null-Pruefung)
+        if (typBox.getScene() != null) {
+            ((Stage) typBox.getScene().getWindow()).sizeToScene();
+        }
     }
 
     @FXML

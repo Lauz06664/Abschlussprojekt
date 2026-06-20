@@ -22,6 +22,7 @@
                 <TextField fx:id="txtNeuesDeck" prefWidth="200" />
                 <Button onAction="#neuesDeck" text="Deck anlegen" />
                 <Button onAction="#neueKarte" text="Neue Karte..." />
+                <Button onAction="#lernenStarten" text="Lernen starten" />
             </HBox>
             <Label fx:id="lblInfo" style="-fx-text-fill: red;" text="" />
         </VBox>

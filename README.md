@@ -1,15 +1,15 @@
-# Lernkartei - Version 2
+# Lernkartei - Version 3
 
 ## Was wir gemacht haben
-- Zweite Kartenart `MultipleChoiceKarte` eingebaut (Frage + 3 Antworten + welche richtig ist).
-- `DeckVerwaltung` geschrieben, die alle Decks verwaltet:
-  - `HashMap`, um ein Deck schnell über den Namen zu finden.
-  - `TreeSet`, damit die Decks immer alphabetisch sortiert sind.
-- `ViewManager` gemacht, damit wir mehrere Fenster/Szenen wechseln können (wie in Projekt 10).
-- Einen modalen Editor (`editor.fxml` + `EditorController`) gebaut, um neue Karten anzulegen.
+- Den eigentlichen Lernmodus gebaut - das ist jetzt das Herzstück.
+- Klasse `LernSession` mit einer `PriorityQueue`: die Karte, die am dringendsten dran ist
+  (frühestes Datum), kommt zuerst.
+- Die rekursive Berechnung vom Wiederholungs-Intervall gemacht:
+  richtig -> Intervall verdoppelt sich (1, 2, 4, 8 Tage ...), falsch -> zurück auf 1 Tag.
+- Neue Szene `lern.fxml` + `LernController`: Frage anzeigen, "Antwort zeigen", dann Richtig/Falsch.
 
-## Neu/geändert gegenüber Version 1
-- `Deck` ist jetzt `Comparable` (Sortierung nach Name).
-- Decks kommen nicht mehr direkt aus dem Controller, sondern aus der `DeckVerwaltung`.
-- In der Hauptansicht kann man jetzt selbst neue Decks anlegen und über den Editor Karten hinzufügen.
-- `Main` startet das Programm jetzt über den `ViewManager`.
+## Neu/geändert gegenüber Version 2
+- `Lernkarte` hat jetzt Setter für Streak und Datum, damit der Lernfortschritt verändert werden kann.
+- `ViewManager` kann jetzt auch in den Lernmodus wechseln (`showLernmodus`).
+- In der Hauptansicht gibt es den Button "Lernen starten".
+- Bei falscher Antwort wird die Karte sofort wieder eingereiht und kommt nochmal dran.

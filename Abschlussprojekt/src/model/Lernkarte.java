@@ -35,6 +35,14 @@ public abstract class Lernkarte {
         return naechsteWiederholung;
     }
 
+    public void setRichtigStreak(int richtigStreak) {
+        this.richtigStreak = richtigStreak;
+    }
+
+    public void setNaechsteWiederholung(LocalDate naechsteWiederholung) {
+        this.naechsteWiederholung = naechsteWiederholung;
+    }
+
     // Jede Kartenart liefert ihre Antwort als Text (fuer die Anzeige im Lernmodus).
     public abstract String getAntwort();
 

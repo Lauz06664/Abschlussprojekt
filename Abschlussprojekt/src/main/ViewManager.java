@@ -8,11 +8,12 @@ import javafx.stage.Stage;
 import model.Deck;
 import model.DeckVerwaltung;
 import viewctrl.EditorController;
+import viewctrl.LernController;
 import viewctrl.MainController;
 
 import java.io.IOException;
 
-// Koordiniert die Szenen (Hauptuebersicht + modaler Editor) wie in Projekt 10.
+// Koordiniert die Szenen (Hauptuebersicht, Lernmodus, modaler Editor) wie in Projekt 10.
 public class ViewManager {
 
     private Stage primaryStage;
@@ -37,6 +38,17 @@ public class ViewManager {
         primaryStage.show();
     }
 
+    public void showLernmodus(Deck deck) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/viewctrl/lern.fxml"));
+        Parent root = loader.load();
+
+        LernController controller = loader.getController();
+        controller.setViewManager(this);
+        controller.starteSession(deck);
+
+        primaryStage.setScene(new Scene(root));
+    }
+
     public void openEditorModal(Deck deck) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/viewctrl/editor.fxml"));
         Parent root = loader.load();
@@ -48,7 +60,7 @@ public class ViewManager {
         dialog.setTitle("Karte erstellen");
         dialog.initOwner(primaryStage);
         dialog.initModality(Modality.APPLICATION_MODAL);
-        dialog.setScene(new Scene(root, 400, 380));
+        dialog.setScene(new Scene(root));
         dialog.showAndWait();
     }
 }

@@ -79,4 +79,18 @@ public class MainController {
         zeigeKarten(deck);
         deckView.refresh();
     }
+
+    @FXML
+    void lernenStarten() throws IOException {
+        Deck deck = deckView.getSelectionModel().getSelectedItem();
+        if (deck == null) {
+            lblInfo.setText("Bitte zuerst ein Deck auswaehlen.");
+            return;
+        }
+        if (deck.getKarten().isEmpty()) {
+            lblInfo.setText("Dieses Deck hat noch keine Karten.");
+            return;
+        }
+        viewManager.showLernmodus(deck);
+    }
 }
