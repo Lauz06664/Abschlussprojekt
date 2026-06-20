@@ -17,6 +17,9 @@ import java.util.List;
 // Modaler Dialog zum Anlegen einer neuen Karte (Text oder Multiple Choice).
 public class EditorController {
 
+    // Frage: Buchstaben (inkl. Umlaute), Ziffern, Leerzeichen, Bindestrich, Punkt; 2 bis 50 Zeichen.
+    private static final String REGEX_KARTENNAME = "[A-Za-zÄÖÜäöüß0-9\\s\\-\\.\\?]{2,50}";
+
     @FXML private ChoiceBox<String> typBox;
     @FXML private TextField txtFrage;
 
@@ -71,8 +74,9 @@ public class EditorController {
     @FXML
     void speichern(ActionEvent event) {
         String frage = txtFrage.getText().trim();
-        if (frage.isEmpty()) {
-            lblInfo.setText("Bitte eine Frage eingeben.");
+        // Frage per Regex pruefen (2-50 erlaubte Zeichen).
+        if (!frage.matches(REGEX_KARTENNAME)) {
+            lblInfo.setText("Ungueltige Frage (2-50 Zeichen, keine Sonderzeichen).");
             return;
         }
 

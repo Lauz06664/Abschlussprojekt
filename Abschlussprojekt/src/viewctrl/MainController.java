@@ -14,6 +14,9 @@ import java.io.IOException;
 
 public class MainController {
 
+    // Deck-Name: Buchstaben (inkl. Umlaute), Ziffern und Leerzeichen; 2 bis 30 Zeichen.
+    private static final String REGEX_DECKNAME = "[A-Za-zÄÖÜäöüß0-9\\s]{2,30}";
+
     @FXML private ListView<Deck> deckView;
     @FXML private ListView<Lernkarte> kartenView;
     @FXML private TextField txtNeuesDeck;
@@ -53,8 +56,9 @@ public class MainController {
     @FXML
     void neuesDeck() {
         String name = txtNeuesDeck.getText().trim();
-        if (name.isEmpty()) {
-            lblInfo.setText("Bitte einen Deck-Namen eingeben.");
+        // Deck-Name per Regex pruefen (2-30 erlaubte Zeichen).
+        if (!name.matches(REGEX_DECKNAME)) {
+            lblInfo.setText("Ungueltiger Deck-Name (2-30 Zeichen, keine Sonderzeichen).");
             return;
         }
         if (model.existiert(name)) {

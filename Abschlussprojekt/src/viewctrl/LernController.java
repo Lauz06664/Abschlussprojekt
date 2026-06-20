@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import main.ViewManager;
 import model.Deck;
+import model.LernHistorie;
 import model.LernSession;
 
 import java.io.IOException;
@@ -20,9 +21,14 @@ public class LernController {
 
     private ViewManager viewManager;
     private LernSession session;
+    private LernHistorie historie;
 
     public void setViewManager(ViewManager vm) {
         this.viewManager = vm;
+    }
+
+    public void setHistorie(LernHistorie historie) {
+        this.historie = historie;
     }
 
     // Wird vom ViewManager aufgerufen, sobald das Deck feststeht.
@@ -61,12 +67,14 @@ public class LernController {
     @FXML
     void richtig() {
         session.richtig();
+        historie.addRichtig();
         zeigeNaechste();
     }
 
     @FXML
     void falsch() {
         session.falsch();
+        historie.addFalsch();
         zeigeNaechste();
     }
 

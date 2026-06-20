@@ -1,14 +1,16 @@
-# Lernkartei - Version 4
+# Lernkartei - Version 5
 
 ## Was wir gemacht haben
-- Speichern und Laden eingebaut, damit die Karten nicht mehr beim Schließen weg sind.
-- Klasse `DeckFileHandler` mit `DataOutputStream` / `DataInputStream` geschrieben
-  (ähnlich wie bei der Schülerverwaltung in Projekt 16).
-- Pro Karte speichern wir auch einen Typ-Marker (0 = Text, 1 = Multiple Choice),
-  damit beim Laden wieder die richtige Klasse erzeugt wird.
-- Auch der Lernstand (Streak + nächstes Datum) wird mitgespeichert.
+- Eingaben mit Regex überprüft (so wie im Formular-Projekt, Projekt 13):
+  - Frage im Editor (2-50 Zeichen, keine komischen Sonderzeichen).
+  - Deck-Name (2-30 Zeichen).
+- Klasse `LernHistorie` gemacht, die pro Tag mitzählt, wie viele Karten richtig
+  und falsch beantwortet wurden (zwei `HashMap`s mit dem Datum als Schlüssel).
+- `HistorieFileHandler`, der die Historie als einfache Textdatei speichert/lädt
+  (mit `BufferedWriter` / `BufferedReader`).
 
-## Neu/geändert gegenüber Version 3
-- `DeckVerwaltung` startet jetzt leer; Beispieldaten gibt es nur beim allerersten Start.
-- Beim Programmstart wird aus der Datei `lernkartei.dat` geladen (wenn sie existiert).
-- Beim Schließen des Fensters wird automatisch gespeichert, dazu gibt es noch einen "Speichern"-Button.
+## Neu/geändert gegenüber Version 4
+- Im Editor und beim Deck-Anlegen wird die Eingabe jetzt validiert (Fehlertext, wenn was nicht passt).
+- Im Lernmodus wird bei jeder Antwort die Historie hochgezählt.
+- Beim Speichern wird jetzt auch die Datei `historie.txt` mitgespeichert und beim Start geladen.
+- Das brauchen wir als Vorbereitung für die Statistik (Charts) in der nächsten Version.

@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-5_Notaufnahme/aufgabe-5-krankenhaus-anmeldesystem-priorityqueue-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-5_Notaufnahme/aufgabe-5-krankenhaus-anmeldesystem-priorityqueue-Lauz06664" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version3/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version3/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version4/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version4/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/benutzer.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/benutzer.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/historie.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/historie.txt" afterDir="false" />
@@ -47,9 +48,10 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/2025-26/Software-Entwicklung/Abschlussprojekt/Projektversionen/Version4/Abschlussprojekt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Z:/2025-26/Software-Entwicklung/Abschlussprojekt/Projektversionen/Version5/Abschlussprojekt&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -70,9 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1780292990109</updated>
       <workItem from="1780292992143" duration="6000" />
-      <workItem from="1780295487669" duration="37000" />
-      <workItem from="1780295610739" duration="9000" />
-      <workItem from="1780983156579" duration="24000" />
+      <workItem from="1780295528284" duration="155000" />
+      <workItem from="1780983182143" duration="21000" />
     </task>
     <servers />
   </component>

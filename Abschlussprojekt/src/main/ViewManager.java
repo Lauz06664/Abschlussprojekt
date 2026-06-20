@@ -7,8 +7,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Deck;
 import model.DeckVerwaltung;
+import model.LernHistorie;
 import viewctrl.DeckFileHandler;
 import viewctrl.EditorController;
+import viewctrl.HistorieFileHandler;
 import viewctrl.LernController;
 import viewctrl.MainController;
 
@@ -18,16 +20,25 @@ import java.io.IOException;
 // Koordiniert die Szenen (Hauptuebersicht, Lernmodus, modaler Editor) wie in Projekt 10.
 public class ViewManager {
 
-    private static final String DATEINAME = "lernkartei.dat";
+    // Alle gespeicherten Dateien liegen gesammelt im Ordner "Speicher".
+    private static final String SPEICHER_ORDNER = "Speicher";
+    private static final String DATEINAME = SPEICHER_ORDNER + "/lernkartei.dat";
+    private static final String HISTORIE_DATEINAME = SPEICHER_ORDNER + "/historie.txt";
 
     private Stage primaryStage;
     private DeckVerwaltung model;
+    private LernHistorie historie;
     private DeckFileHandler fileHandler;
+    private HistorieFileHandler historieHandler;
 
     public ViewManager(Stage stage) {
         this.primaryStage = stage;
+        // Ordner anlegen, falls er noch nicht existiert (mkdirs legt fehlende Ordner an).
+        new File(SPEICHER_ORDNER).mkdirs();
         this.model = new DeckVerwaltung();
+        this.historie = new LernHistorie();
         this.fileHandler = new DeckFileHandler(DATEINAME, model);
+        this.historieHandler = new HistorieFileHandler(HISTORIE_DATEINAME, historie);
 
         // Beim Start: gespeicherte Daten laden, sonst Beispieldaten anlegen.
         File datei = new File(DATEINAME);
@@ -36,6 +47,7 @@ public class ViewManager {
         } else {
             model.beispielDatenLaden();
         }
+        historieHandler.laden();
 
         // Beim Schliessen des Fensters automatisch speichern.
         primaryStage.setOnCloseRequest(e -> speichern());
@@ -43,6 +55,7 @@ public class ViewManager {
 
     public void speichern() {
         fileHandler.schreiben();
+        historieHandler.schreiben();
     }
 
     public void showMain() throws IOException {
@@ -65,6 +78,7 @@ public class ViewManager {
 
         LernController controller = loader.getController();
         controller.setViewManager(this);
+        controller.setHistorie(historie);
         controller.starteSession(deck);
 
         primaryStage.setScene(new Scene(root));
