@@ -13,8 +13,9 @@ public class DeckVerwaltung {
     private HashMap<String, Deck> deckIndex = new HashMap<>();
     private TreeSet<Deck> sortierteDeckListe = new TreeSet<>();
 
+    // Startet leer. Beispieldaten bzw. das Laden aus der Datei
+    // uebernimmt der ViewManager beim Programmstart.
     public DeckVerwaltung() {
-        beispielDatenLaden();
     }
 
     public void addDeck(Deck deck) {
@@ -34,8 +35,8 @@ public class DeckVerwaltung {
         return sortierteDeckListe;
     }
 
-    // Ein paar Beispieldecks, damit die App nicht leer startet.
-    private void beispielDatenLaden() {
+    // Ein paar Beispieldecks fuer den ersten Start (wenn noch keine Datei da ist).
+    public void beispielDatenLaden() {
         Deck sew = new Deck("SEW Grundlagen");
         sew.addKarte(new TextKarte("k1", "Was ist Polymorphismus?",
                 "Gleiche Methode, unterschiedliches Verhalten je nach Objekt."));

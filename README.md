@@ -1,15 +1,14 @@
-# Lernkartei - Version 3
+# Lernkartei - Version 4
 
 ## Was wir gemacht haben
-- Den eigentlichen Lernmodus gebaut - das ist jetzt das Herzstück.
-- Klasse `LernSession` mit einer `PriorityQueue`: die Karte, die am dringendsten dran ist
-  (frühestes Datum), kommt zuerst.
-- Die rekursive Berechnung vom Wiederholungs-Intervall gemacht:
-  richtig -> Intervall verdoppelt sich (1, 2, 4, 8 Tage ...), falsch -> zurück auf 1 Tag.
-- Neue Szene `lern.fxml` + `LernController`: Frage anzeigen, "Antwort zeigen", dann Richtig/Falsch.
+- Speichern und Laden eingebaut, damit die Karten nicht mehr beim Schließen weg sind.
+- Klasse `DeckFileHandler` mit `DataOutputStream` / `DataInputStream` geschrieben
+  (ähnlich wie bei der Schülerverwaltung in Projekt 16).
+- Pro Karte speichern wir auch einen Typ-Marker (0 = Text, 1 = Multiple Choice),
+  damit beim Laden wieder die richtige Klasse erzeugt wird.
+- Auch der Lernstand (Streak + nächstes Datum) wird mitgespeichert.
 
-## Neu/geändert gegenüber Version 2
-- `Lernkarte` hat jetzt Setter für Streak und Datum, damit der Lernfortschritt verändert werden kann.
-- `ViewManager` kann jetzt auch in den Lernmodus wechseln (`showLernmodus`).
-- In der Hauptansicht gibt es den Button "Lernen starten".
-- Bei falscher Antwort wird die Karte sofort wieder eingereiht und kommt nochmal dran.
+## Neu/geändert gegenüber Version 3
+- `DeckVerwaltung` startet jetzt leer; Beispieldaten gibt es nur beim allerersten Start.
+- Beim Programmstart wird aus der Datei `lernkartei.dat` geladen (wenn sie existiert).
+- Beim Schließen des Fensters wird automatisch gespeichert, dazu gibt es noch einen "Speichern"-Button.

@@ -81,6 +81,12 @@ public class MainController {
     }
 
     @FXML
+    void speichern() {
+        viewManager.speichern();
+        lblInfo.setText("Gespeichert.");
+    }
+
+    @FXML
     void lernenStarten() throws IOException {
         Deck deck = deckView.getSelectionModel().getSelectedItem();
         if (deck == null) {

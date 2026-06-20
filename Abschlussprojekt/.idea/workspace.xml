@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="09b6fdb2-937f-4be3-8a95-5596f398b38d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-11_Streams-einf/aufgabe11-streamseinf-hrung-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-11_Streams-einf/aufgabe11-streamseinf-hrung-Lauz06664" afterDir="false" />
@@ -10,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-15_Datei-Kopieren-Byte-by-Byte/aufgabe-15-dateikopierenbytebybyte-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-15_Datei-Kopieren-Byte-by-Byte/aufgabe-15-dateikopierenbytebybyte-Lauz06664" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-5_Notaufnahme/aufgabe-5-krankenhaus-anmeldesystem-priorityqueue-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-5_Notaufnahme/aufgabe-5-krankenhaus-anmeldesystem-priorityqueue-Lauz06664" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version3/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version3/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/benutzer.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/benutzer.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/historie.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/historie.txt" afterDir="false" />
@@ -51,11 +49,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/2025-26/Software-Entwicklung/Abschlussprojekt/Projektversionen/Version3/Abschlussprojekt&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Z:/2025-26/Software-Entwicklung/Abschlussprojekt/Projektversionen/Version4/Abschlussprojekt&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -76,8 +70,9 @@
       <option name="presentableId" value="Default" />
       <updated>1780292990109</updated>
       <workItem from="1780292992143" duration="6000" />
-      <workItem from="1780295094905" duration="384000" />
-      <workItem from="1780983105513" duration="49000" />
+      <workItem from="1780295487669" duration="37000" />
+      <workItem from="1780295610739" duration="9000" />
+      <workItem from="1780983156579" duration="24000" />
     </task>
     <servers />
   </component>
