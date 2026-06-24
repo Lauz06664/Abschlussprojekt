@@ -33,7 +33,7 @@ public class StatistikController {
         this.historie = historie;
     }
 
-    // Beide Diagramme mit Daten fuellen.
+    // Beide Diagramme mit Daten füllen.
     public void anzeigen() {
         zeigeFortschritt();
         zeigeKartenProDeck();

@@ -2,9 +2,9 @@ package model;
 
 import java.time.LocalDate;
 
-// Abstrakte Basisklasse fuer alle Lernkarten.
+// Abstrakte Basisklasse für alle Lernkarten.
 // Gemeinsame Daten: ID, Frage, wie oft hintereinander richtig (Streak)
-// und das Datum der naechsten Wiederholung.
+// und das Datum der nächsten Wiederholung.
 public abstract class Lernkarte {
 
     protected String id;
@@ -43,7 +43,7 @@ public abstract class Lernkarte {
         this.naechsteWiederholung = naechsteWiederholung;
     }
 
-    // Jede Kartenart liefert ihre Antwort als Text (fuer die Anzeige im Lernmodus).
+    // Jede Kartenart liefert ihre Antwort als Text (für die Anzeige im Lernmodus).
     public abstract String getAntwort();
 
     @Override

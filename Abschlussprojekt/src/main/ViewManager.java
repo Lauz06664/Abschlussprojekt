@@ -18,7 +18,7 @@ import viewctrl.StatistikController;
 import java.io.File;
 import java.io.IOException;
 
-// Koordiniert die Szenen (Hauptuebersicht, Lernmodus, Statistik, modaler Editor) wie in Projekt 10.
+// Koordiniert die Szenen (Hauptübersicht, Lernmodus, Statistik, modaler Editor) wie in Projekt 10.
 public class ViewManager {
 
     // Alle gespeicherten Dateien liegen gesammelt im Ordner "Speicher".
@@ -34,6 +34,8 @@ public class ViewManager {
 
     public ViewManager(Stage stage) {
         this.primaryStage = stage;
+        // Fenstergröße fix lassen: verhindert verschobene Layouts beim Vergrößern/Verkleinern.
+        this.primaryStage.setResizable(false);
         // Ordner anlegen, falls er noch nicht existiert (mkdirs legt fehlende Ordner an).
         new File(SPEICHER_ORDNER).mkdirs();
         this.model = new DeckVerwaltung();
@@ -70,6 +72,7 @@ public class ViewManager {
 
         primaryStage.setTitle("Lernkartei");
         primaryStage.setScene(new Scene(root));
+        primaryStage.sizeToScene();
         primaryStage.show();
     }
 
@@ -83,6 +86,7 @@ public class ViewManager {
         controller.starteSession(deck);
 
         primaryStage.setScene(new Scene(root));
+        primaryStage.sizeToScene();
     }
 
     public void showStatistik() throws IOException {
@@ -96,6 +100,7 @@ public class ViewManager {
         controller.anzeigen();
 
         primaryStage.setScene(new Scene(root));
+        primaryStage.sizeToScene();
     }
 
     public void openEditorModal(Deck deck) throws IOException {

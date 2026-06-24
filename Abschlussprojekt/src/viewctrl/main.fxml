@@ -9,24 +9,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="500" prefWidth="750" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.MainController">
+<BorderPane prefHeight="500" prefWidth="910" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.MainController">
 
     <top>
         <VBox spacing="10">
             <padding>
                 <Insets bottom="15" left="15" right="15" top="15" />
             </padding>
-            <Label style="-fx-font-size: 20;" text="Lernkartei - Uebersicht" />
-            <HBox spacing="10">
+            <Label styleClass="title" text="Lernkartei - Übersicht" />
+            <HBox alignment="CENTER_LEFT" spacing="10">
                 <Label text="Neues Deck:" />
                 <TextField fx:id="txtNeuesDeck" prefWidth="200" />
                 <Button onAction="#neuesDeck" text="Deck anlegen" />
-                <Button onAction="#neueKarte" text="Neue Karte..." />
+                <Button onAction="#neueKarte" text="Neue Karte" />
                 <Button onAction="#lernenStarten" text="Lernen starten" />
                 <Button onAction="#statistikAnzeigen" text="Statistik" />
                 <Button onAction="#speichern" text="Speichern" />
             </HBox>
-            <Label fx:id="lblInfo" style="-fx-text-fill: red;" text="" />
+            <Label fx:id="lblInfo" styleClass="error-label" text="" />
         </VBox>
     </top>
 
@@ -36,14 +36,14 @@
                 <Insets bottom="15" left="15" right="15" top="15" />
             </padding>
 
-            <VBox spacing="5">
-                <Label text="Decks:" />
-                <ListView fx:id="deckView" prefHeight="340" prefWidth="300" />
+            <VBox spacing="5" HBox.hgrow="ALWAYS">
+                <Label styleClass="section-label" text="Decks:" />
+                <ListView fx:id="deckView" VBox.vgrow="ALWAYS" />
             </VBox>
 
-            <VBox spacing="5">
-                <Label text="Karten im Deck:" />
-                <ListView fx:id="kartenView" prefHeight="340" prefWidth="330" />
+            <VBox spacing="5" HBox.hgrow="ALWAYS">
+                <Label styleClass="section-label" text="Karten im Deck:" />
+                <ListView fx:id="kartenView" VBox.vgrow="ALWAYS" />
             </VBox>
         </HBox>
     </center>

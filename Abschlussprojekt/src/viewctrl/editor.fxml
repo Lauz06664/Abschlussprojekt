@@ -7,35 +7,35 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="10" prefWidth="360" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.EditorController">
+<VBox spacing="10" prefWidth="360" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.EditorController">
     <padding>
         <Insets bottom="15" left="15" right="15" top="15" />
     </padding>
 
-    <Label style="-fx-font-size: 16;" text="Neue Karte" />
+    <Label styleClass="title" text="Neue Karte" />
 
-    <Label text="Kartentyp:" />
+    <Label styleClass="section-label" text="Kartentyp:" />
     <ChoiceBox fx:id="typBox" prefWidth="200" />
 
-    <Label text="Frage:" />
+    <Label styleClass="section-label" text="Frage:" />
     <TextField fx:id="txtFrage" />
 
     <VBox fx:id="boxText" spacing="5">
-        <Label text="Antwort:" />
+        <Label styleClass="section-label" text="Antwort:" />
         <TextField fx:id="txtAntwort" />
     </VBox>
 
     <VBox fx:id="boxMc" spacing="5">
-        <Label text="Antwort 1:" />
+        <Label styleClass="section-label" text="Antwort 1:" />
         <TextField fx:id="txtA1" />
-        <Label text="Antwort 2:" />
+        <Label styleClass="section-label" text="Antwort 2:" />
         <TextField fx:id="txtA2" />
-        <Label text="Antwort 3:" />
+        <Label styleClass="section-label" text="Antwort 3:" />
         <TextField fx:id="txtA3" />
-        <Label text="Richtige Antwort:" />
+        <Label styleClass="section-label" text="Richtige Antwort:" />
         <ChoiceBox fx:id="korrektBox" prefWidth="200" />
     </VBox>
 
     <Button onAction="#speichern" text="Speichern" />
-    <Label fx:id="lblInfo" style="-fx-text-fill: red;" text="" />
+    <Label fx:id="lblInfo" styleClass="error-label" text="" />
 </VBox>

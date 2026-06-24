@@ -35,12 +35,12 @@ public class MainController {
 
     @FXML
     public void initialize() {
-        // Wenn ein Deck ausgewaehlt wird, die Karten rechts anzeigen.
+        // Wenn ein Deck ausgewählt wird, die Karten rechts anzeigen.
         deckView.getSelectionModel().selectedItemProperty().addListener(
                 (obs, altesDeck, neuesDeck) -> zeigeKarten(neuesDeck));
     }
 
-    // Fuellt die Deck-Liste aus dem TreeSet (alphabetisch sortiert).
+    // Füllt die Deck-Liste aus dem TreeSet (alphabetisch sortiert).
     public void zeigeDecks() {
         deckView.setItems(FXCollections.observableArrayList(model.getSortierteDeckListe()));
     }
@@ -56,9 +56,9 @@ public class MainController {
     @FXML
     void neuesDeck() {
         String name = txtNeuesDeck.getText().trim();
-        // Deck-Name per Regex pruefen (2-30 erlaubte Zeichen).
+        // Deck-Name per Regex prüfen (2-30 erlaubte Zeichen).
         if (!name.matches(REGEX_DECKNAME)) {
-            lblInfo.setText("Ungueltiger Deck-Name (2-30 Zeichen, keine Sonderzeichen).");
+            lblInfo.setText("Ungültiger Deck-Name (2-30 Zeichen, keine Sonderzeichen).");
             return;
         }
         if (model.existiert(name)) {
@@ -75,7 +75,7 @@ public class MainController {
     void neueKarte() throws IOException {
         Deck deck = deckView.getSelectionModel().getSelectedItem();
         if (deck == null) {
-            lblInfo.setText("Bitte zuerst ein Deck auswaehlen.");
+            lblInfo.setText("Bitte zuerst ein Deck auswählen.");
             return;
         }
         viewManager.openEditorModal(deck);
@@ -94,7 +94,7 @@ public class MainController {
     void lernenStarten() throws IOException {
         Deck deck = deckView.getSelectionModel().getSelectedItem();
         if (deck == null) {
-            lblInfo.setText("Bitte zuerst ein Deck auswaehlen.");
+            lblInfo.setText("Bitte zuerst ein Deck auswählen.");
             return;
         }
         if (deck.getKarten().isEmpty()) {

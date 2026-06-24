@@ -16,7 +16,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-// Speichert und laedt alle Decks typisiert binaer (DataOutputStream/DataInputStream).
+// Speichert und lädt alle Decks typisiert binär (DataOutputStream/DataInputStream).
 // Aufbau pro Karte: gemeinsame Daten, dann ein Typ-Marker (0 = Text, 1 = MC)
 // und danach die typspezifischen Daten.
 public class DeckFileHandler {

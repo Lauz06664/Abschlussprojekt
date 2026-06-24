@@ -14,7 +14,7 @@ public class DeckVerwaltung {
     private TreeSet<Deck> sortierteDeckListe = new TreeSet<>();
 
     // Startet leer. Beispieldaten bzw. das Laden aus der Datei
-    // uebernimmt der ViewManager beim Programmstart.
+    // übernimmt der ViewManager beim Programmstart.
     public DeckVerwaltung() {
     }
 
@@ -35,17 +35,17 @@ public class DeckVerwaltung {
         return sortierteDeckListe;
     }
 
-    // Ein paar Beispieldecks fuer den ersten Start (wenn noch keine Datei da ist).
+    // Ein paar Beispieldecks für den ersten Start (wenn noch keine Datei da ist).
     public void beispielDatenLaden() {
         Deck sew = new Deck("SEW Grundlagen");
         sew.addKarte(new TextKarte("k1", "Was ist Polymorphismus?",
                 "Gleiche Methode, unterschiedliches Verhalten je nach Objekt."));
-        sew.addKarte(new TextKarte("k2", "Wofuer steht MVC?",
+        sew.addKarte(new TextKarte("k2", "Wofür steht MVC?",
                 "Model - View - Controller"));
 
         List<String> antworten = new ArrayList<>();
         antworten.add("Liste");
-        antworten.add("Warteschlange mit Prioritaet");
+        antworten.add("Warteschlange mit Priorität");
         antworten.add("Stapel");
         sew.addKarte(new MultipleChoiceKarte("k3", "Was ist eine PriorityQueue?", antworten, 1));
 

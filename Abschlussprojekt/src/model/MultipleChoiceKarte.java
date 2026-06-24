@@ -2,7 +2,7 @@ package model;
 
 import java.util.List;
 
-// Karte mit mehreren Antwortmoeglichkeiten, von denen genau eine richtig ist.
+// Karte mit mehreren Antwortmöglichkeiten, von denen genau eine richtig ist.
 public class MultipleChoiceKarte extends Lernkarte {
 
     private List<String> antworten;

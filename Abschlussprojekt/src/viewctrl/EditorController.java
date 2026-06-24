@@ -23,11 +23,11 @@ public class EditorController {
     @FXML private ChoiceBox<String> typBox;
     @FXML private TextField txtFrage;
 
-    // Bereich fuer Textkarten
+    // Bereich für Textkarten
     @FXML private VBox boxText;
     @FXML private TextField txtAntwort;
 
-    // Bereich fuer Multiple-Choice-Karten
+    // Bereich für Multiple-Choice-Karten
     @FXML private VBox boxMc;
     @FXML private TextField txtA1;
     @FXML private TextField txtA2;
@@ -50,7 +50,7 @@ public class EditorController {
         korrektBox.getItems().addAll("Antwort 1", "Antwort 2", "Antwort 3");
         korrektBox.getSelectionModel().select(0);
 
-        // Felder je nach gewaehltem Kartentyp ein-/ausblenden.
+        // Felder je nach gewähltem Kartentyp ein-/ausblenden.
         typBox.getSelectionModel().selectedItemProperty().addListener(
                 (obs, alt, neu) -> updateFelder());
         updateFelder();
@@ -64,8 +64,8 @@ public class EditorController {
         boxMc.setVisible(!istText);
         boxMc.setManaged(!istText);
 
-        // Fenster an die neue Hoehe anpassen, damit bei Multiple Choice nichts abgeschnitten wird.
-        // (beim ersten Aufruf gibt es noch keine Scene, deshalb die null-Pruefung)
+        // Fenster an die neue Höhe anpassen, damit bei Multiple Choice nichts abgeschnitten wird.
+        // (beim ersten Aufruf gibt es noch keine Scene, deshalb die null-Prüfung)
         if (typBox.getScene() != null) {
             ((Stage) typBox.getScene().getWindow()).sizeToScene();
         }
@@ -74,13 +74,13 @@ public class EditorController {
     @FXML
     void speichern(ActionEvent event) {
         String frage = txtFrage.getText().trim();
-        // Frage per Regex pruefen (2-50 erlaubte Zeichen).
+        // Frage per Regex prüfen (2-50 erlaubte Zeichen).
         if (!frage.matches(REGEX_KARTENNAME)) {
-            lblInfo.setText("Ungueltige Frage (2-50 Zeichen, keine Sonderzeichen).");
+            lblInfo.setText("Ungültige Frage (2-50 Zeichen, keine Sonderzeichen).");
             return;
         }
 
-        // Einfache, eindeutige ID ueber den Zeitstempel.
+        // Einfache, eindeutige ID über den Zeitstempel.
         String id = "karte_" + System.currentTimeMillis();
 
         if (typBox.getValue().equals("Text")) {

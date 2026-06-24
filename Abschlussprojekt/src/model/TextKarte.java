@@ -1,6 +1,6 @@
 package model;
 
-// Einfachste Kartenart: Vorderseite (Frage) und Rueckseite (Antwort) als Text.
+// Einfachste Kartenart: Vorderseite (Frage) und Rückseite (Antwort) als Text.
 public class TextKarte extends Lernkarte {
 
     private String antwort;

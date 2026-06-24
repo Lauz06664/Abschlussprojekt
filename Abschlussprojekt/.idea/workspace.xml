@@ -5,19 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09b6fdb2-937f-4be3-8a95-5596f398b38d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-11_Streams-einf/aufgabe11-streamseinf-hrung-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-11_Streams-einf/aufgabe11-streamseinf-hrung-Lauz06664" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-13_formular-regex/aufgabe-13-formular-regex-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-13_formular-regex/aufgabe-13-formular-regex-Lauz06664" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-15_Datei-Kopieren-Byte-by-Byte/aufgabe-15-dateikopierenbytebybyte-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-15_Datei-Kopieren-Byte-by-Byte/aufgabe-15-dateikopierenbytebybyte-Lauz06664" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-5_Notaufnahme/aufgabe-5-krankenhaus-anmeldesystem-priorityqueue-Lauz06664" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DasHabenWirBisherGemacht/Projekte/Projekt-5_Notaufnahme/aufgabe-5-krankenhaus-anmeldesystem-priorityqueue-Lauz06664" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AktuelleAbgabe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AktuelleAbgabe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version2/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Version3/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version3/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Version4/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version4/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Version5/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version5/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Speicher/benutzer.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Speicher/historie.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Speicher/historie.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Speicher/lernkartei.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Speicher/lernkartei.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Benutzer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BenutzerVerwaltung.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DeckVerwaltung.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DeckVerwaltung.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LernHistorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LernHistorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LernSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LernSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Lernkarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Lernkarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MultipleChoiceKarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MultipleChoiceKarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TextKarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TextKarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/BenutzerFileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/DeckFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/DeckFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/EditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/StatistikController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/StatistikController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/editor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/editor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/lern.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/lern.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/login.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/viewctrl/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/benutzer.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/benutzer.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/historie.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/historie.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/lernkartei.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/lernkartei.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewctrl/statistik.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewctrl/statistik.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Klassendiagramm.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../Klassendiagramm.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/Abschlussprojekt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/Speicher/benutzer.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/Speicher/historie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/Speicher/lernkartei.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/main/ViewManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/Benutzer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/BenutzerVerwaltung.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/Deck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/DeckVerwaltung.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/LernHistorie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/LernSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/Lernkarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/MultipleChoiceKarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/model/TextKarte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/BenutzerFileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/DeckFileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/EditorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/HistorieFileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/LernController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/StatistikController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/editor.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/lern.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/statistik.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Abschlussprojekt/src/viewctrl/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/Klassendiagramm.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Version8/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +111,15 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/2025-26/Software-Entwicklung/Abschlussprojekt/Projektversionen/Version6/Abschlussprojekt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;Z:/2025-26/Software-Entwicklung/Abschlussprojekt/Projektversionen/Version7/Abschlussprojekt&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -84,6 +143,8 @@
       <workItem from="1780295829516" duration="1364000" />
       <workItem from="1780914955448" duration="119000" />
       <workItem from="1780983204657" duration="79000" />
+      <workItem from="1782194075528" duration="167000" />
+      <workItem from="1782208913890" duration="1094000" />
     </task>
     <servers />
   </component>

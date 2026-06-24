@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-// Ein Deck buendelt mehrere Lernkarten unter einem Namen.
+// Ein Deck bündelt mehrere Lernkarten unter einem Namen.
 // Comparable, damit Decks im TreeSet alphabetisch sortiert werden.
 public class Deck implements Comparable<Deck> {
 

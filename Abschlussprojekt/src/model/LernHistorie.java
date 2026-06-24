@@ -3,8 +3,8 @@ package model;
 import java.time.LocalDate;
 import java.util.HashMap;
 
-// Zaehlt pro Tag, wie viele Karten richtig bzw. falsch beantwortet wurden.
-// Schluessel ist das Datum als Text (z.B. "2026-06-01").
+// Zählt pro Tag, wie viele Karten richtig bzw. falsch beantwortet wurden.
+// Schlüssel ist das Datum als Text (z.B. "2026-06-01").
 public class LernHistorie {
 
     private HashMap<String, Integer> richtigProTag = new HashMap<>();
