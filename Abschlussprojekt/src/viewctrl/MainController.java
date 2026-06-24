@@ -103,4 +103,9 @@ public class MainController {
         }
         viewManager.showLernmodus(deck);
     }
+
+    @FXML
+    void statistikAnzeigen() throws IOException {
+        viewManager.showStatistik();
+    }
 }

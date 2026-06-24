@@ -13,11 +13,12 @@ import viewctrl.EditorController;
 import viewctrl.HistorieFileHandler;
 import viewctrl.LernController;
 import viewctrl.MainController;
+import viewctrl.StatistikController;
 
 import java.io.File;
 import java.io.IOException;
 
-// Koordiniert die Szenen (Hauptuebersicht, Lernmodus, modaler Editor) wie in Projekt 10.
+// Koordiniert die Szenen (Hauptuebersicht, Lernmodus, Statistik, modaler Editor) wie in Projekt 10.
 public class ViewManager {
 
     // Alle gespeicherten Dateien liegen gesammelt im Ordner "Speicher".
@@ -80,6 +81,19 @@ public class ViewManager {
         controller.setViewManager(this);
         controller.setHistorie(historie);
         controller.starteSession(deck);
+
+        primaryStage.setScene(new Scene(root));
+    }
+
+    public void showStatistik() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/viewctrl/statistik.fxml"));
+        Parent root = loader.load();
+
+        StatistikController controller = loader.getController();
+        controller.setViewManager(this);
+        controller.setModel(model);
+        controller.setHistorie(historie);
+        controller.anzeigen();
 
         primaryStage.setScene(new Scene(root));
     }

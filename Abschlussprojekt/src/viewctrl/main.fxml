@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="500" prefWidth="700" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.MainController">
+<BorderPane prefHeight="500" prefWidth="750" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewctrl.MainController">
 
     <top>
         <VBox spacing="10">
@@ -23,6 +23,7 @@
                 <Button onAction="#neuesDeck" text="Deck anlegen" />
                 <Button onAction="#neueKarte" text="Neue Karte..." />
                 <Button onAction="#lernenStarten" text="Lernen starten" />
+                <Button onAction="#statistikAnzeigen" text="Statistik" />
                 <Button onAction="#speichern" text="Speichern" />
             </HBox>
             <Label fx:id="lblInfo" style="-fx-text-fill: red;" text="" />
